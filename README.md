@@ -19,11 +19,15 @@ The API links five datasets while adhering to the design principles of represent
 
 ## Project requirements:
 
-Users can get individual movie information with reviews of the movie, adjust review ratings, or delete movie reviews.
+Users can view individual movie information and perform the following actions:
+- [ ] Adjust review ratings.
+- [ ] Delete reviews.
 
 Users can view the following lists:
-
-All movies, all movies that are currently showing, reviews for each movie, and all theaters along with the movies currently showing at each theater.
+- [ ] All movies. 
+- [ ] All movies that are currently showing in any theater. 
+- [ ] Reviews for each movie.
+- [ ] All theaters, each with a list of movies currently showing there.
 
 ## Screenshots:
 ![Screen Shot 2021-12-02 at 4 31 35 PM](https://user-images.githubusercontent.com/86169488/144519312-e1f70cb8-d7f6-454e-8dcb-606098812a98.png)
