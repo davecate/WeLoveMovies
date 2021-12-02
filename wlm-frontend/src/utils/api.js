@@ -1,5 +1,5 @@
 const API_DATABASE_URL =
-  process.env.DATABASE_URL || "https://dc-welovemovies-backend.herokuapp.com"
+  process.env.DATABASE_URL || "http://localhost:5000"
 
 /**
  * Defines the default headers for these functions to work with `json-server`
