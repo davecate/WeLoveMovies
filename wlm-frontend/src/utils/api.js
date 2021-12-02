@@ -1,5 +1,4 @@
-const API_DATABASE_URL =
-  process.env.DATABASE_URL || "http://localhost:5000"
+const API_URL = process.env.API_URL || "http://localhost:5000"
 
 /**
  * Defines the default headers for these functions to work with `json-server`
@@ -47,7 +46,7 @@ async function fetchJson(url, options, onCancel) {
 
 function populateReviews(signal) {
   return async (movie) => {
-    const url = `${API_DATABASE_URL}/movies/${movie.movie_id}/reviews`;
+    const url = `${API_URL}/movies/${movie.movie_id}/reviews`;
     movie.reviews = await fetchJson(url, { headers, signal }, []);
     return movie;
   };
@@ -55,7 +54,7 @@ function populateReviews(signal) {
 
 function populateTheaters(signal) {
   return async (movie) => {
-    const url = `${API_DATABASE_URL}/movies/${movie.movie_id}/theaters`;
+    const url = `${API_URL}/movies/${movie.movie_id}/theaters`;
     movie.theaters = await fetchJson(url, { headers, signal }, []);
     return movie;
   };
@@ -67,7 +66,7 @@ function populateTheaters(signal) {
  *  a promise that resolves to a possibly empty array of movies saved in the database.
  */
 export async function listMovies(signal) {
-  const url = new URL(`${API_DATABASE_URL}/movies?is_showing=true`);
+  const url = new URL(`${API_URL}/movies?is_showing=true`);
   const addReviews = populateReviews(signal);
   return await fetchJson(url, { headers, signal }, []).then((movies) =>
     Promise.all(movies.map(addReviews))
@@ -80,7 +79,7 @@ export async function listMovies(signal) {
  *  a promise that resolves to a possibly empty array of theaters saved in the database.
  */
 export async function listTheaters(signal) {
-  const url = new URL(`${API_DATABASE_URL}/theaters`);
+  const url = new URL(`${API_URL}/theaters`);
   return await fetchJson(url, { headers, signal }, []);
 }
 
@@ -90,7 +89,7 @@ export async function listTheaters(signal) {
  *  a promise that resolves to a possibly empty array of movies saved in the database.
  */
 export async function readMovie(movieId, signal) {
-  const url = new URL(`${API_DATABASE_URL}/movies/${movieId}`);
+  const url = new URL(`${API_URL}/movies/${movieId}`);
   const addReviews = populateReviews(signal);
   const addTheaters = populateTheaters(signal);
   return await fetchJson(url, { headers, signal }, [])
@@ -99,12 +98,12 @@ export async function readMovie(movieId, signal) {
 }
 
 export async function deleteReview(reviewId) {
-  const url = `${API_DATABASE_URL}/reviews/${reviewId}`;
+  const url = `${API_URL}/reviews/${reviewId}`;
   return await fetchJson(url, { method: "DELETE", headers }, {});
 }
 
 export async function updateReview(reviewId, data) {
-  const url = `${API_DATABASE_URL}/reviews/${reviewId}`;
+  const url = `${API_URL}/reviews/${reviewId}`;
   const options = {
     method: "PUT",
     headers,
