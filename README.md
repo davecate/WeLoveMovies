@@ -1,6 +1,6 @@
 # WeLoveMovies
 
-Bootcamp capstone: the back-end of a movie-listing app, WeLoveMovies. 
+Bootcamp capstone: a movie-listing app called WeLoveMovies. 
 
 View the deployed app here: https://dc-welovemovies.vercel.app
 
