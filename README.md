@@ -15,7 +15,7 @@ View the deployed app here: https://dc-welovemovies.vercel.app
 - [ ] HTML
 - [ ] PostgreSQL
 
-Links five datasets while adhering to the design principles of representational state transfer (REST) in order to meet project requirements.
+The API links five datasets while adhering to the design principles of representational state transfer (REST) in order to meet project requirements.
 
 ## Project requirements:
 
