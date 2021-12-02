@@ -1,4 +1,4 @@
-const URL_BASE = process.env.API_URL || "https://dc-welovemovies-backend.herokuapp.com"
+const URL_BASE = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000"
 
 /**
  * Defines the default headers for these functions to work with `json-server`
