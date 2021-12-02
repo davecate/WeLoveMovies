@@ -17,7 +17,7 @@ View the deployed app here: https://dc-welovemovies.vercel.app
 
 The API links five datasets while adhering to the design principles of representational state transfer (REST) in order to meet project requirements.
 
-## Project requirements:
+## User Stories:
 
 Users can view individual movie information and perform the following actions:
 - [ ] Adjust review ratings.
