@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const URL_BASE = process.env.API_URL || "http://localhost:5000"
 
 /**
