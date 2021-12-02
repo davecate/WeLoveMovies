@@ -1,6 +1,4 @@
-require("dotenv").config();
-
-const URL_BASE = process.env.API_URL || "http://localhost:5000"
+const URL_BASE = process.env.API_URL || "https://dc-welovemovies-backend.herokuapp.com"
 
 /**
  * Defines the default headers for these functions to work with `json-server`
